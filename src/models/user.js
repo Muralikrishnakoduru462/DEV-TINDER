@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       validate(value) {
         if (!validator.isEmail(value)) {
-          throw new error("Invaid email address: " + value);
+          throw new Error("Invaid email address: " + value);
         }
       },
     },
@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
         "https://www.shutterstock.com/image-vector/isolated-object-avatar-dummy-symbol-260nw-1290296656.jpg",
       validate(value) {
         if (!validator.isURL(value)) {
-          throw new error("Invaid photo Url: " + value);
+          throw new Error("Invaid photo Url: " + value);
         }
       },
     },
